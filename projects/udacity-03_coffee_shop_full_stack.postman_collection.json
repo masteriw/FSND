@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "0420d27c-6e63-4fdc-8751-aa8e0909e732",
+		"name": "udacity-03_coffee_shop_full_stack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8606475"
+	},
+	"item": [
+		{
+			"name": "/drinks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ink5MnZ0XzVuQTRyMlF1RHp5SnZPRyJ9.eyJpc3MiOiJodHRwczovL21hc3Rlcml3LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NWJlZTcxOTRiODI2MWM1NjJlYWRlNzQiLCJhdWQiOiJUZXN0QXBpIiwiaWF0IjoxNzA4NTA4MzIzLCJleHAiOjE3MDg1MTU1MjMsImF6cCI6InJ0ZTVSNXI2Q0hXM1lGU2lKcElwUWZDaXl0RnhkZW9xIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6ZHJpbmtzIiwiZ2V0OmRyaW5rcyIsImdldDpkcmlua3MtZGV0YWlsIiwicGF0Y2g6ZHJpbmtzIiwicG9zdDpkcmlua3MiXX0.suDaHljEpp8ztjge5y37x9EQTWcLY2MnrCQlR886TXjC1iDxBsHCvELP2IIc3qrV4OK7uIPsHdbtegkrTyKJ2FKz5azV8cMSyAhN8h8llCfoFfiYtdGuPARNWImxvoRnVqKbigEN0IRlTmV_6mNw53g-mzyabQtMiI61U65QFiJw8jJsnfC9UKeewBK6k50_WtwTiUjnsLjPvtJWG4rrtq10844endrcUHlb10fUVzu7jcIEb5069vwEHJcDkPYwpgEE5xtsJAgLo5CE72Gbhfig_BHO36N0cq2hTLwaOtsSEiHmec33ucYCzutA2_ksHJCBOZ4YOPUysmi38j8J6g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/drinks",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"drinks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/drinks-detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ink5MnZ0XzVuQTRyMlF1RHp5SnZPRyJ9.eyJpc3MiOiJodHRwczovL21hc3Rlcml3LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NWJlZTcxOTRiODI2MWM1NjJlYWRlNzQiLCJhdWQiOiJUZXN0QXBpIiwiaWF0IjoxNzA4NTA4MzIzLCJleHAiOjE3MDg1MTU1MjMsImF6cCI6InJ0ZTVSNXI2Q0hXM1lGU2lKcElwUWZDaXl0RnhkZW9xIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6ZHJpbmtzIiwiZ2V0OmRyaW5rcyIsImdldDpkcmlua3MtZGV0YWlsIiwicGF0Y2g6ZHJpbmtzIiwicG9zdDpkcmlua3MiXX0.suDaHljEpp8ztjge5y37x9EQTWcLY2MnrCQlR886TXjC1iDxBsHCvELP2IIc3qrV4OK7uIPsHdbtegkrTyKJ2FKz5azV8cMSyAhN8h8llCfoFfiYtdGuPARNWImxvoRnVqKbigEN0IRlTmV_6mNw53g-mzyabQtMiI61U65QFiJw8jJsnfC9UKeewBK6k50_WtwTiUjnsLjPvtJWG4rrtq10844endrcUHlb10fUVzu7jcIEb5069vwEHJcDkPYwpgEE5xtsJAgLo5CE72Gbhfig_BHO36N0cq2hTLwaOtsSEiHmec33ucYCzutA2_ksHJCBOZ4YOPUysmi38j8J6g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/drinks-detail",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"drinks-detail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/greeting",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ink5MnZ0XzVuQTRyMlF1RHp5SnZPRyJ9.eyJpc3MiOiJodHRwczovL21hc3Rlcml3LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NWJlZTcxOTRiODI2MWM1NjJlYWRlNzQiLCJhdWQiOiJUZXN0QXBpIiwiaWF0IjoxNzA4NTA4MzIzLCJleHAiOjE3MDg1MTU1MjMsImF6cCI6InJ0ZTVSNXI2Q0hXM1lGU2lKcElwUWZDaXl0RnhkZW9xIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6ZHJpbmtzIiwiZ2V0OmRyaW5rcyIsImdldDpkcmlua3MtZGV0YWlsIiwicGF0Y2g6ZHJpbmtzIiwicG9zdDpkcmlua3MiXX0.suDaHljEpp8ztjge5y37x9EQTWcLY2MnrCQlR886TXjC1iDxBsHCvELP2IIc3qrV4OK7uIPsHdbtegkrTyKJ2FKz5azV8cMSyAhN8h8llCfoFfiYtdGuPARNWImxvoRnVqKbigEN0IRlTmV_6mNw53g-mzyabQtMiI61U65QFiJw8jJsnfC9UKeewBK6k50_WtwTiUjnsLjPvtJWG4rrtq10844endrcUHlb10fUVzu7jcIEb5069vwEHJcDkPYwpgEE5xtsJAgLo5CE72Gbhfig_BHO36N0cq2hTLwaOtsSEiHmec33ucYCzutA2_ksHJCBOZ4YOPUysmi38j8J6g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Even bloodier blood\",\n\t\"recipe\": [{\n        \"color\": \"red\",\n        \"name\": \"blood\",\n        \"parts\": 10\n    },{\n        \"color\": \"green\",\n        \"parts\": 1,\n        \"name\": \"puke\"\n    }]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/drinks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"drinks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/drinks",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful DELETE request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ink5MnZ0XzVuQTRyMlF1RHp5SnZPRyJ9.eyJpc3MiOiJodHRwczovL21hc3Rlcml3LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NWJlZTcxOTRiODI2MWM1NjJlYWRlNzQiLCJhdWQiOiJUZXN0QXBpIiwiaWF0IjoxNzA4NTA4MzIzLCJleHAiOjE3MDg1MTU1MjMsImF6cCI6InJ0ZTVSNXI2Q0hXM1lGU2lKcElwUWZDaXl0RnhkZW9xIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6ZHJpbmtzIiwiZ2V0OmRyaW5rcyIsImdldDpkcmlua3MtZGV0YWlsIiwicGF0Y2g6ZHJpbmtzIiwicG9zdDpkcmlua3MiXX0.suDaHljEpp8ztjge5y37x9EQTWcLY2MnrCQlR886TXjC1iDxBsHCvELP2IIc3qrV4OK7uIPsHdbtegkrTyKJ2FKz5azV8cMSyAhN8h8llCfoFfiYtdGuPARNWImxvoRnVqKbigEN0IRlTmV_6mNw53g-mzyabQtMiI61U65QFiJw8jJsnfC9UKeewBK6k50_WtwTiUjnsLjPvtJWG4rrtq10844endrcUHlb10fUVzu7jcIEb5069vwEHJcDkPYwpgEE5xtsJAgLo5CE72Gbhfig_BHO36N0cq2hTLwaOtsSEiHmec33ucYCzutA2_ksHJCBOZ4YOPUysmi38j8J6g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/drinks/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"drinks",
+						"3"
+					]
+				},
+				"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "/drinks",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ink5MnZ0XzVuQTRyMlF1RHp5SnZPRyJ9.eyJpc3MiOiJodHRwczovL21hc3Rlcml3LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NWJlZTcxOTRiODI2MWM1NjJlYWRlNzQiLCJhdWQiOiJUZXN0QXBpIiwiaWF0IjoxNzA4NTA4MzIzLCJleHAiOjE3MDg1MTU1MjMsImF6cCI6InJ0ZTVSNXI2Q0hXM1lGU2lKcElwUWZDaXl0RnhkZW9xIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6ZHJpbmtzIiwiZ2V0OmRyaW5rcyIsImdldDpkcmlua3MtZGV0YWlsIiwicGF0Y2g6ZHJpbmtzIiwicG9zdDpkcmlua3MiXX0.suDaHljEpp8ztjge5y37x9EQTWcLY2MnrCQlR886TXjC1iDxBsHCvELP2IIc3qrV4OK7uIPsHdbtegkrTyKJ2FKz5azV8cMSyAhN8h8llCfoFfiYtdGuPARNWImxvoRnVqKbigEN0IRlTmV_6mNw53g-mzyabQtMiI61U65QFiJw8jJsnfC9UKeewBK6k50_WtwTiUjnsLjPvtJWG4rrtq10844endrcUHlb10fUVzu7jcIEb5069vwEHJcDkPYwpgEE5xtsJAgLo5CE72Gbhfig_BHO36N0cq2hTLwaOtsSEiHmec33ucYCzutA2_ksHJCBOZ4YOPUysmi38j8J6g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Somewhat bloody blood\",\n\t\"recipe\": [{\n        \"color\": \"red\",\n        \"name\": \"blood\",\n        \"parts\": 1\n    },{\n        \"color\": \"puke green\",\n        \"parts\": 100,\n        \"err\": \"err\",\n        \"bloop\": \"bleep\"\n    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/drinks/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"drinks",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
