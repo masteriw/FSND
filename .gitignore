@@ -13,3 +13,4 @@ ehthumbs.db
 Thumbs.db
 
 .github/**
+docker-compose.yml
