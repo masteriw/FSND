@@ -30,6 +30,10 @@ Here's an example of curl request that tests the get:actors endpoint:
 
 Please note that the Render hosting is a little slow while the instance initiates, due to being on the free tier.
 
+### Hosting it at Render
+Regarding Render hosting, gunicorn should be used as a production WSGI.
+Also their local database and all the other local variables referred to in the setup.sh file should be exported as environment variables in their environment as well.
+
 ### Running the Application Locally
 Run the command `flask run` to start the local server. The application will be available at `http://localhost:5000/`.
 

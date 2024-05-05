@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export DATABASE_URL='postgresql://username:password@localhost:5432/database_name'
+export DATABASE_URL='postgresql://postgres:postgres@localhost:5432/postgres'
 export AUTH0_DOMAIN='masteriw.us.auth0.com'
 export ALGORITHMS='RS256'
 export API_AUDIENCE='TestApi'
