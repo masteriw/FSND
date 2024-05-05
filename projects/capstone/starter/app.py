@@ -2,6 +2,9 @@ from flask import Flask, jsonify, request, abort
 from models import setup_db, Movie, Actor
 from flask_cors import CORS
 from auth import AuthError, requires_auth
+import os
+
+
 
 app = Flask(__name__)
 setup_db(app)
@@ -186,5 +189,6 @@ def handle_exception(e):
             "message": "Ocorreu um erro inesperado"
         }), 500
 
+port = int(os.environ.get('PORT', 5000))
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=port)
