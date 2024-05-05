@@ -3,6 +3,12 @@
 ## Introduction
 The Casting Agency API is a Flask application that enables users to manage actors and movies within a casting agency. This API allows for CRUD (Create, Read, Update, Delete) operations on actors and movies.
 
+## Motivation
+
+The vision of the Casting Agency API is to streamline the process of managing talent and productions in entertainment. To list actors, and their movies.
+
+Our goal was to create an intuitive platform that simplifies the administrative workload. By automating the mundane tasks, we free up the artists and visionaries to focus on their actual jobs.
+
 ## Getting Started
 
 ### Prerequisites

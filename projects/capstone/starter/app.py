@@ -10,28 +10,43 @@ app = Flask(__name__)
 setup_db(app)
 CORS(app)
 
-# Endpoint para obter todos os atores
+# GET /actors
+# Requires 'get:actors' permission
+# Returns a list of all actors in the database
 @app.route('/actors', methods=['GET'])
 @requires_auth('get:actors')
 def get_actors(payload):
     actors = Actor.query.all()
+    # Example of successful return:
+    # {
+    #   "success": True,
+    #   "actors": ["John Doe", "Jane Smith"]
+    # }
     return jsonify({
         'success': True,
         'actors': [actor.name for actor in actors]
     }), 200
 
-# Endpoint para obter todos os filmes
+# GET /movies
+# Requires 'get:movies' permission
+# Returns a list of all movies in the database
 @app.route('/movies', methods=['GET'])
 @requires_auth('get:movies')
 def get_movies(payload):
     movies = Movie.query.all()
+    # Example of successful return:
+    # {
+    #   "success": True,
+    #   "movies": [{"id": 1, "title": "Inception"}, {"id": 2, "title": "The Matrix"}]
+    # }
     return jsonify({
         'success': True,
         'movies': [{'id': movie.id, 'title': movie.title} for movie in movies],
     }), 200
 
-
-# Endpoint para deletar um ator
+# DELETE /actors/<actor_id>
+# Requires 'delete:actors' permission
+# Deletes an actor by ID and returns the ID of the deleted actor
 @app.route('/actors/<int:actor_id>', methods=['DELETE'])
 @requires_auth('delete:actors')
 def delete_actor(payload, actor_id):
@@ -39,12 +54,19 @@ def delete_actor(payload, actor_id):
     if actor is None:
         abort(404)
     actor.delete()
+    # Example of successful return:
+    # {
+    #   "success": True,
+    #   "deleted": 3
+    # }
     return jsonify({
         'success': True,
         'deleted': actor_id
     }), 200
 
-# Endpoint para deletar um filme
+# DELETE /movies/<movie_id>
+# Requires 'delete:movies' permission
+# Deletes a movie by ID and returns the ID of the deleted movie
 @app.route('/movies/<int:movie_id>', methods=['DELETE'])
 @requires_auth('delete:movies')
 def delete_movie(payload, movie_id):
@@ -52,12 +74,19 @@ def delete_movie(payload, movie_id):
     if movie is None:
         abort(404)
     movie.delete()
+    # Example of successful return:
+    # {
+    #   "success": True,
+    #   "deleted": 4
+    # }
     return jsonify({
         'success': True,
         'deleted': movie_id
     }), 200
 
-# Endpoint para adicionar um ator
+# POST /actors
+# Requires 'post:actors' permission
+# Adds a new actor to the database and returns the name and ID of the added actor
 @app.route('/actors', methods=['POST'])
 @requires_auth('post:actors')
 def add_actor(payload):
@@ -67,13 +96,21 @@ def add_actor(payload):
     gender = body.get('gender', None)
     actor = Actor(name=name, age=age, gender=gender)
     actor.insert()
+    # Example of successful return:
+    # {
+    #   "success": True,
+    #   "actor": "Emily Blunt",
+    #   "id": 5
+    # }
     return jsonify({
         'success': True,
         'actor': actor.name,
         'id': actor.id
     }), 200
 
-# Endpoint para adicionar um filme
+# POST /movies
+# Requires 'post:movies' permission
+# Adds a new movie to the database and returns the title and ID of the added movie
 @app.route('/movies', methods=['POST'])
 @requires_auth('post:movies')
 def add_movie(payload):
@@ -82,13 +119,21 @@ def add_movie(payload):
     release_date = body.get('release_date', None)
     movie = Movie(title=title, release_date=release_date)
     movie.insert()
+    # Example of successful return:
+    # {
+    #   "success": True,
+    #   "movie": "A Quiet Place",
+    #   "id": 6
+    # }
     return jsonify({
         'success': True,
         'movie': movie.title,
         'id': movie.id
     }), 200
 
-# Endpoint para atualizar um ator
+# PATCH /actors/<actor_id>
+# Requires 'patch:actors' permission
+# Updates an actor by ID and returns the ID of the updated actor
 @app.route('/actors/<int:actor_id>', methods=['PATCH'])
 @requires_auth('patch:actors')
 def update_actor(payload, actor_id):
@@ -100,12 +145,19 @@ def update_actor(payload, actor_id):
     actor.age = body.get('age', actor.age)
     actor.gender = body.get('gender', actor.gender)
     actor.update()
+    # Example of successful return:
+    # {
+    #   "success": True,
+    #   "updated": 7
+    # }
     return jsonify({
         'success': True,
         'updated': actor_id
     }), 200
 
-# Endpoint para atualizar um filme
+# PATCH /movies/<movie_id>
+# Requires 'patch:movies' permission
+# Updates a movie by ID and returns the ID of the updated movie
 @app.route('/movies/<int:movie_id>', methods=['PATCH'])
 @requires_auth('patch:movies')
 def update_movie(payload, movie_id):
@@ -116,6 +168,11 @@ def update_movie(payload, movie_id):
     movie.title = body.get('title', movie.title)
     movie.release_date = body.get('release_date', movie.release_date)
     movie.update()
+    # Example of successful return:
+    # {
+    #   "success": True,
+    #   "updated": 8
+    # }
     return jsonify({
         'success': True,
         'updated': movie_id
