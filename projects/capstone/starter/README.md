@@ -24,7 +24,7 @@ Here's an example of curl request that tests the get:actors endpoint:
 
 Please note that the Render hosting is a little slow while the instance initiates, due to being on the free tier.
 
-### Running the Application
+### Running the Application Locally
 Run the command `flask run` to start the local server. The application will be available at `http://localhost:5000/`.
 
 ## API Endpoints
