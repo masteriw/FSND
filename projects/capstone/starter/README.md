@@ -60,7 +60,7 @@ The `test.py` file contains a suite of unit tests that ensure the functionality 
 ### Running Tests
 To run the tests, use the following command:
 
-pytest test.py
+```pytest test.py```
 
 ## Contact
 Vitor de Carvalho
